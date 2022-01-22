@@ -1,3 +1,5 @@
+
+/* .App changes the entire body of the screen*/
 .App {
   background: #210B2C;
   height: 100vh;
@@ -5,6 +7,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* .header is for a header div that creates a bar at the very top of the screen
+    without having to use flexbox to keep it at the top*/
 .header {
   height: 5rem;
   width: 100%;
@@ -14,6 +19,10 @@
   padding: 0 1rem;
   background: #55286F;
 }
+
+/* this is a circular image that stays in the top left of the screen.
+    IN FUTURE would love to upload my own logo made for this app and not make it
+    enclosed in a circle */
 .logo {
   height: 3rem;
   width: 3rem;
@@ -24,12 +33,16 @@
   border-radius: 50%;
 
 }
+
+/* the word CHATTER! in the header*/
 .title {
   color: #D8B4E2;
   font-weight: bold;
   font-size: 2rem;
   margin-left: 1rem;
 }
+
+/* similar to header, .footer is in a footer div at the bottom of the page */
 .footer {
   height: 6rem;
   width: 100%;
@@ -40,6 +53,8 @@
   background: #55286F;
   position: relative;
 }
+
+/* allows for users to input their chats */
 .text-input {
   width: 100%;
   border: 1px solid  #D8B4E2;
@@ -49,6 +64,9 @@
   background: #D8B4E2;
   color: #210B2C;
 }
+
+/* a button for users to press and send their messages
+    IN FUTURE WILL HAVE TO ACTUALLY PRESS AND SEND MESSAGES */
 .send {
   background:#210B2C;
   color: #D8B4E2;
