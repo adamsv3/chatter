@@ -1,16 +1,31 @@
 import "./App.css";
+import TextInput from './TextInput';
+import {useState} from 'react';
+import Message from './Message';
 
 function App() {
+  const [messages, setMessages] = useState([]);
+  function sendMessage(text) {
+    const newMessage = {
+      text,
+      time: Date.now(),
+      user: "Valerie",
+    }
+    setMessages([newMessage, ...messages]);
+  }
+  console.log(messages);
   return (
     <div className="App">
       <header className="header"> 
-        <div className="logo" />
-        <span className="title">CHATTER!</span>
+          <div className="logo" />
+          <span className="title">CHATTER!</span>
       </header>
-      <footer className="footer"> 
-        <input className="text-input" /> 
-        <button className="send">↑</button>
-      </footer>
+      <div className = "messages"> 
+        {messages.map((msg)=>{
+          return <Message {...msg}/>;
+        })}
+      </div>
+      <TextInput sendMessage={sendMessage} />
     </div>
   );
 }

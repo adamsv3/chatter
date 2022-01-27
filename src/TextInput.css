@@ -1,0 +1,38 @@
+/* similar to header, .footer is in a footer div at the bottom of the page */
+.footer {
+    height: 6rem;
+    width: 100%;
+    border-top: 2px solid #D8B4E2;
+    display: flex;
+    align-items: center;
+    background: #55286F;
+    position: relative;
+  }
+
+/* allows for users to input their chats */
+.text-input {
+  position: absolute;
+  width: 98%;
+  border: 1px solid  #D8B4E2;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  background: #D8B4E2;
+  color: #210B2C;
+  font-size: 1rem;
+  left: 10px;
+}
+
+  .send { 
+    background:#210B2C;
+    color: #D8B4E2;
+    border-radius: .2rem 1rem 1rem .2rem;
+    border: none;
+    height: 2.5rem;
+    width: 2rem;
+    position: absolute;
+    right: 1.15rem;
+    cursor: pointer;
+    font-size: 1.15rem;
+  }
+  
