@@ -23,7 +23,7 @@ function TextInput(props) {
                 className = "camera"
                 onClick={props.showCamera}
                 style={{left:10, right:'auto'}}>
-                <FiCamera style={{height:15, width:15}} />
+                <FiCamera style={{height:30, width:30}} />
             </button>
             <input 
                 className = "text-input" 
@@ -32,7 +32,7 @@ function TextInput(props) {
                 onKeyPress={onKeyPress}
             />
             <button className = "send" onClick={send}> 
-                <FiSend />
+                <FiSend style = {{height:30, width:30}}/>
             </button>
         </footer>
     );

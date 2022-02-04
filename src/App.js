@@ -17,7 +17,7 @@ function App() {
 
   //"sendMessage" runs whenever we click the send button
   function sendMessage(text) {
-    if (!text) return;
+    if (!text.trim()) return;
     //we'll create a new message object
     const newMessage = {
       text,
