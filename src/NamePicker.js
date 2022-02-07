@@ -1,62 +1,6 @@
-// import "./NamePicker.css";
-// import { useState} from "react";
-
-// function NamePicker (props){
-//     // const[EditName, setEditName] = useState(false);
-//     const [name, setName] = useState('');
-
-//     function naming(){
-        
-//     }
-
-//     return (
-//         <div>
-//             <input className = "username">
-//             </input>
-//             <button className ="button">
-//                 OK
-//             </button>
-//         </div>
-//     )
-// }
-
-// function TextInput(props) {
-//     const [text, setText] = useState("");
-
-//     function send() {
-//         props.sendMessage(text);
-//         setText("");
-//     }
-    
-//     function onKeyPress(e){
-//         if (e.key==='Enter') {
-//             send();
-//         }
-//     }
-
-//     return (
-//         <footer className = "footer">
-//             <button
-//                 className = "camera"
-//                 onClick={props.showCamera}
-//                 style={{left:10, right:'auto'}}>
-//                 <FiCamera style={{height:30, width:30}} />
-//             </button>
-//             <input 
-//                 className = "text-input" 
-//                 value={text} 
-//                 onChange={(e) => setText(e.target.value)}
-//                 onKeyPress={onKeyPress}
-//             />
-//             <button className = "send" onClick={send}> 
-//                 <FiSend style = {{height:30, width:30}}/>
-//             </button>
-//         </footer>
-//     );
-// }
 import "./NamePicker.css";
 import { useState} from "react";
-import { FiEdit } from 'react-icons/fi'
+import { FiEdit, FiSend } from 'react-icons/fi'
 
 function NamePicker(props) {
     
@@ -64,24 +8,22 @@ function NamePicker(props) {
     const [name, setName] = useState("")
 
     if(editName === false) {
-        return <div className= "username">
-            <p id="placeholder">{name}</p>
+        return <div className= "id">
             Change Username
-            <FiEdit
-                onClick={()=> {
-                    setEditName(true)
-                    props.onSend("")
-                }}
-                id="profile"
-            />
+            <button className="button">
+                <FiEdit
+                    style = {{height:20, width:20}}
+                    onClick={()=> {
+                        setEditName(true)
+                    }}
+                />
+            </button>
         </div>
 
     } else if (editName === true) {
-        return <div className= "username">
+        return <div className = "id">
             <input size="12"
-            value={name}
-            className = "input"
-            id="header-input"
+            className = "username"
             placeholder="Add User"
             onChange={e=> {
                 setName(e.target.value)
@@ -89,22 +31,21 @@ function NamePicker(props) {
 
             onKeyPress={(e) => {
             if (e.key === "Enter" && (name)) {
-                props.onSend(name)
                 setEditName(false)
-                setName('')
-                localStorage.setItem('name',name)
+                setName(name)
             }}}/>   
 
-            <FiEdit 
-                onClick={()=> {
-                    if(name) {
-                        props.onSend(name)
-                        setName('')
-                        setEditName(false)
-                        localStorage.setItem('name',name)
-                    }}}
-                id="profile"
-            />
+            {console.log(name)}
+            <button className ="button">
+                <FiSend
+                    style = {{height:30, width:30}}
+                    onClick={()=> {
+                        if(name) {
+                            setName(name)
+                            setEditName(false)
+                        }}}
+                />  
+            </button>
         </div>
     }
 }

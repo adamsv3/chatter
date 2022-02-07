@@ -55,7 +55,7 @@ function App() {
           <div className="logo">
           </div>
           <span className="title">CHATTER!</span>
-          <NamePicker />
+            <NamePicker />
       </header>
       <div className = "messages"> 
         {messages.map((msg, i)=>{
