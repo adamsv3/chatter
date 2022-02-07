@@ -1,0 +1,38 @@
+.username { 
+    position: absolute;
+    right: 2rem;
+    width: 10rem;
+    border: 1px solid  #D8B4E2;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    background: #D8B4E2;
+    color: #210B2C;
+    font-size: 1rem;
+}
+
+.button {
+    position: absolute;
+    background:#210B2C;
+    color: #D8B4E2;
+    border-radius: 1rem;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 1.15rem;
+}
+
+/* .id {
+    position: absolute;
+    right: 2rem;
+    width: 10rem;
+    border: 1px solid  #D8B4E2;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    background: #D8B4E2;
+    color: #210B2C;
+    font-size: 1rem;
+} */

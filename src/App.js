@@ -3,6 +3,7 @@ import TextInput from './TextInput';
 import {useState} from 'react';
 import Message from './Message';
 import Camera from 'react-snap-pic';
+import NamePicker from './NamePicker';
 
 // this is a Component called App
 function App() {
@@ -14,6 +15,13 @@ function App() {
 
   // "setShowCamera" is a function that is used to update "showCamera"
   const [showCamera, setShowCamera] = useState(false);
+
+  var img = new Image(); 
+  var div = document.getElementById('chatterLogo'); 
+  img.onload = function() { 
+    div.appendChild(img) 
+  };
+
 
   //"sendMessage" runs whenever we click the send button
   function sendMessage(text) {
@@ -44,8 +52,10 @@ function App() {
   return (
     <div className="App">
       <header className="header"> 
-          <div className="logo" />
+          <div className="logo">
+          </div>
           <span className="title">CHATTER!</span>
+          <NamePicker />
       </header>
       <div className = "messages"> 
         {messages.map((msg, i)=>{
