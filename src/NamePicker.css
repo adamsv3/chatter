@@ -1,49 +1,39 @@
-.id {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    right: 2rem;
-    padding: 0 1rem;
-    color: #D8B4E2;
-    font-size: 1rem;
-}
 
-.username { 
-    position: relative;
-    width: 10rem;
-    border: 1px solid  #D8B4E2;
-    height: 2rem;
-    border-radius: 1rem;
-    padding: 0 1rem;
-    background: #D8B4E2;
-    color: #210B2C;
-    font-size: 1rem;
-}
-
-.button {
-    position: relative;
-    background:#D8B4E2;
-    color: #210B2C;
-    border-radius: 1rem;
-    border: none;
-    height: 2.5rem;
-    width: 2.5xsrem;
-    cursor: pointer;
-}
 
 
 .name-picker{
     display: flex;
     align-items: center;
+    background: #D8B4E2;
+    border-radius: .5rem;
+    height: 2rem;
+    position: absolute;
+    right: 10px;
+    padding: .5rem;
+    color: #210B2C;
+}
+
+.name-picker-input{
+    background: #210B2C;
+    border-radius: .5rem;
+    color: #D8B4E2;
+    padding: .2rem;
+}
+
+.name-picker-button {
+    background: #210B2C;
+    border-radius: .5rem;
+    color: #D8B4E2;
+    padding: .2rem;
 }
 
 .name-picker svg{
-    stroke: white;
+    stroke: #210B2C;
     cursor: pointer;
 }
 
 .name-picker-name{
-    color:white;
+    color:#210B2C;
     margin-right: 0.5rem;
     font-size: 0.8rem;
 }
