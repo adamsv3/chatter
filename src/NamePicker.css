@@ -31,3 +31,19 @@
     cursor: pointer;
 }
 
+
+.name-picker{
+    display: flex;
+    align-items: center;
+}
+
+.name-picker svg{
+    stroke: white;
+    cursor: pointer;
+}
+
+.name-picker-name{
+    color:white;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+}
